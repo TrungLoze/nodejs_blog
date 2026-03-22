@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "blog",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/TrungLoze/nodejs_blog#readme",
+  "bugs": {
+    "url": "https://github.com/TrungLoze/nodejs_blog/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrungLoze/nodejs_blog.git"
+  },
+  "license": "ISC",
+  "author": "htrung",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
