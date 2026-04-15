@@ -1,35 +1,47 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [
-    "blog",
-    "nodejs"
-  ],
-  "homepage": "https://github.com/TrungLoze/nodejs_blog#readme",
-  "bugs": {
-    "url": "https://github.com/TrungLoze/nodejs_blog/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TrungLoze/nodejs_blog.git"
-  },
-  "license": "ISC",
-  "author": "htrung",
-  "type": "commonjs",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "nodemon --inspect src/index.js",
-    "watch":"npx sass --watch src/resources/scss/app.scss src/public/css/app.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "express": "^5.2.1",
-    "express-handlebars": "^8.0.6"
-  },
-  "devDependencies": {
-    "morgan": "^1.10.1",
-    "nodemon": "^3.1.14",
-    "sass": "^1.99.0"
-  }
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [
+        "blog",
+        "nodejs"
+    ],
+    "homepage": "https://github.com/TrungLoze/nodejs_blog#readme",
+    "bugs": {
+        "url": "https://github.com/TrungLoze/nodejs_blog/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TrungLoze/nodejs_blog.git"
+    },
+    "license": "ISC",
+    "author": "htrung",
+    "type": "commonjs",
+    "main": "src/index.js",
+    "scripts": {
+        "beautiful": "lint-staged",
+        "start": "nodemon --inspect src/index.js",
+        "watch": "npx sass --watch src/resources/scss/app.scss src/public/css/app.css",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "lint-staged": {
+      "src/**/*.{js, json, scss}": "prettier . --write --single-quote --trailing-comma all --tab-width 4"
+    },
+    "husky":{
+      "hook": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "express-handlebars": "^8.0.6"
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^16.4.0",
+        "morgan": "^1.10.1",
+        "nodemon": "^3.1.14",
+        "prettier": "^3.8.3",
+        "sass": "^1.99.0"
+    }
 }
